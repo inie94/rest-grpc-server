@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+package ru.inie;
+
+message Message {
+  string text = 1;
+}
+
+service MessageService {
+  rpc GetMessage (google.protobuf.Empty) returns (Message) {}
+}
